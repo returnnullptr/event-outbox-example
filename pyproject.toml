@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "ddd-example"
+version = "0.1.0"
+description = ""
+authors = ["Yuriy Kehter <yuriy.kehter@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.12"
+pytest = "^8.1.1"
+ruff = "^0.3.7"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
