@@ -1,0 +1,22 @@
+[default.mongo]
+connection_string = "<MONGO CONNECTION STRING>"
+
+[default.kafka]
+bootstrap_servers = "<KAFKA BOOTSTRAP SERVERS>"
+
+[default.logging]
+version = 1
+disable_existing_loggers = false
+
+[default.logging.loggers.ddd]
+level = "INFO"
+handlers = ["console"]
+
+[default.logging.handlers.console]
+class = "logging.StreamHandler"
+level = "INFO"
+formatter = "basic"
+
+[default.logging.formatters.basic]
+"()" = "uvicorn.logging.DefaultFormatter"
+format = "%(levelprefix)s %(message)s"

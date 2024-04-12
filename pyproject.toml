@@ -1,15 +1,33 @@
 [tool.poetry]
-name = "ddd-example"
+name = "event-outbox-example"
 version = "0.1.0"
-description = ""
+description = "Example"
 authors = ["Yuriy Kehter <yuriy.kehter@gmail.com>"]
+packages = [{ include = "example" }]
+repository = "https://github.com/returnnullptr/event-outbox-example"
+readme = "README.md"
 
 [tool.poetry.dependencies]
-python = "^3.12"
-pytest = "^8.1.1"
-ruff = "^0.3.7"
+python = "^3.11"
+fastapi = "^0.111.0"
+uvicorn = "^0.30.1"
+motor = "^3.4.0"
+dynaconf = "^3.2.5"
+event-outbox = "^0.1.5"
+aiokafka = "^0.10.0"
 
+[tool.poetry.group.dev.dependencies]
+ruff = "^0.4.7"
+pytest = "^8.1.1"
+alt-pytest-asyncio = "^0.8.0"
+coverage = "^7.5.3"
+mypy = "^1.10.0"
+asgi-lifespan = "^2.1.0"
 
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
+
+[[tool.mypy.overrides]]
+module = ["aiokafka.*", "dynaconf.*"]
+ignore_missing_imports = true
