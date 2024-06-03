@@ -1,5 +1,7 @@
 # Event Outbox Example
 
+This is a proof-of-concept example of [event-outbox](https://github.com/returnnullptr/event-outbox) python package.
+
 ## Bounded Contexts
 
 ### Booking
