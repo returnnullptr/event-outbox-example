@@ -1,5 +1,6 @@
 [default.mongo]
 connection_string = "<MONGO CONNECTION STRING>"
+event_expiration_seconds = 86400
 
 [default.kafka]
 bootstrap_servers = "<KAFKA BOOTSTRAP SERVERS>"

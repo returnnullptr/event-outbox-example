@@ -1,5 +1,6 @@
 import logging.config
 from contextlib import AsyncExitStack, asynccontextmanager
+from datetime import timedelta
 from pathlib import Path
 from typing import Annotated, AsyncIterator
 
@@ -71,7 +72,14 @@ async def lifespan(app: FastAPI) -> AsyncIterator[None]:
                 auto_offset_reset="earliest",
             )
         )
-        event_outbox = EventOutbox(mongo_client, kafka_producer, kafka_consumer)
+        event_outbox = EventOutbox(
+            mongo_client,
+            kafka_producer,
+            kafka_consumer,
+            mongo_event_expiration=timedelta(
+                seconds=config.mongo.event_expiration_seconds
+            ),
+        )
         await event_outbox.create_indexes()
         await stack.enter_async_context(
             event_outbox.run_event_handler(
