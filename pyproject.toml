@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "event-outbox-example"
-version = "0.1.0"
+version = "0.2.0"
 description = "Example"
 authors = ["Yuriy Kehter <yuriy.kehter@gmail.com>"]
 packages = [{ include = "example" }]
@@ -13,7 +13,7 @@ fastapi = "^0.111.0"
 uvicorn = "^0.30.1"
 motor = "^3.4.0"
 dynaconf = "^3.2.5"
-event-outbox = "^0.1.5"
+event-outbox = "^0.2.0"
 aiokafka = "^0.10.0"
 
 [tool.poetry.group.dev.dependencies]

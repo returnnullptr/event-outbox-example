@@ -72,6 +72,7 @@ async def lifespan(app: FastAPI) -> AsyncIterator[None]:
             )
         )
         event_outbox = EventOutbox(mongo_client, kafka_producer, kafka_consumer)
+        await event_outbox.create_indexes()
         await stack.enter_async_context(
             event_outbox.run_event_handler(
                 lambda event, session: handle_event(
