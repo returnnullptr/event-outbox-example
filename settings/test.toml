@@ -1,8 +1,8 @@
 [test.mongo]
-connection_string = "mongodb://localhost:27018/test?directConnection=true"
+connection_string = "mongodb://localhost:27017/test?directConnection=true"
 
 [test.kafka]
 bootstrap_servers = "localhost:9092"
 
-[test.logging.loggers.ddd]
+[test.logging.loggers.example]
 level = "WARNING"

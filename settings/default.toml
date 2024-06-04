@@ -8,13 +8,13 @@ bootstrap_servers = "<KAFKA BOOTSTRAP SERVERS>"
 version = 1
 disable_existing_loggers = false
 
-[default.logging.loggers.ddd]
+[default.logging.loggers.example]
 level = "INFO"
 handlers = ["console"]
 
 [default.logging.handlers.console]
 class = "logging.StreamHandler"
-level = "INFO"
+level = "DEBUG"
 formatter = "basic"
 
 [default.logging.formatters.basic]

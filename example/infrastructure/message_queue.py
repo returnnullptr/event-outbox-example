@@ -110,4 +110,4 @@ async def handle_event(
                 ObjectId(result_checked.order_id),
             )
 
-    logging.getLogger(__name__).info("Event handled: %s", event)
+    logging.getLogger(__name__).debug("Event handled: %s", event)

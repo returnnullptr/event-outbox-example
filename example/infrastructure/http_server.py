@@ -25,8 +25,8 @@ config = dynaconf.Dynaconf(
     environments=True,
     settings_files=[
         settings_path / "default.toml",
-        settings_path / "local.toml",
         settings_path / "test.toml",
+        settings_path / "local.toml",
     ],
     load_dotenv=True,
     merge_enabled=True,
