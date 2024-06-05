@@ -282,13 +282,13 @@ idna = ">=2.0.0"
 
 [[package]]
 name = "event-outbox"
-version = "0.3.0"
+version = "0.3.1"
 description = "Transactional outbox and idempotent consumer"
 optional = false
 python-versions = "<4.0,>=3.10"
 files = [
-    {file = "event_outbox-0.3.0-py3-none-any.whl", hash = "sha256:d061bab8c913afc8cc771e4762cbfbe3743d276fb2993343f718b8b492fa8df9"},
-    {file = "event_outbox-0.3.0.tar.gz", hash = "sha256:733ce2620e416696d3b59ea74f3bbc584e49e3857e13183608372da65574e88e"},
+    {file = "event_outbox-0.3.1-py3-none-any.whl", hash = "sha256:8a1116e0420171be36399b6fb1255da18cb06e3e780b760e29a4684ecdfff8d7"},
+    {file = "event_outbox-0.3.1.tar.gz", hash = "sha256:62cf753a562cbd4ca019396f3a4699ade517e1ea6d63298d4f1843631dfb64b1"},
 ]
 
 [package.dependencies]
@@ -1499,4 +1499,4 @@ files = [
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.11"
-content-hash = "86609492e7dc063597b092cb2dc49080e26053e11a5ec24ca60eadb10b37b6e9"
+content-hash = "f8b67254e48f81d118815d36f021180ce958d215d81a4ef4bd2af9b7d4196694"
